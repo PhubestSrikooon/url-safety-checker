@@ -50,10 +50,3 @@ fn index(url:&str) -> &'static str {
 fn rocket() -> _ {
     rocket::build().mount("/", routes![index])
 }
-
-// fn main() {
-// let mut _hashmap: HashMap<String, String> = HashMap::new();
-//     check_lines(&mut _hashmap,"201.221.109.6").unwrap();
-//     check_lines(&mut _hashmap,"201.221.109.7").unwrap();
-
-// }
