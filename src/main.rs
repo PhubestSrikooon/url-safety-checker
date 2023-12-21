@@ -39,8 +39,8 @@ fn check_lines(_map: &mut HashMap<String, String>, text: &str) -> Result<bool> {
 fn index(url:&str) -> &'static str {
     let a = check_lines(unsafe { &mut *_HASHMAP.lock().unwrap() }, url);
     match a {
-        Ok(true) => return "{is_safe : false}",
-        Ok(false) => return "{is_safe : true}",
+        Ok(true) => return "{'is_safe' : false}",
+        Ok(false) => return "{'is_safe' : true}",
         Err(_) => return "Error"
     }
 
